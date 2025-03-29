@@ -1,8 +1,15 @@
 const express = require("express")
 const app = express()
+const mongoose = require('mongoose');
+const connectToDatabase = require("./database");
+require('dotenv').config();
 
 //Alternative
 //const app = required('express')()
+
+
+connectToDatabase();
+
 
 
 app.get("/",(req,res)=>{
